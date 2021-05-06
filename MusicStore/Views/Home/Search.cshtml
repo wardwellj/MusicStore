@@ -7,6 +7,8 @@
     }
     else
     {
+        // GRADY - We're not using 'Album' as the model for this view; we're
+        // using AlbumListModel.  Change 'Album' to 'var'.
         foreach (Album a in Model)
         {
             string s = a.AlbumId + ".jpg";
