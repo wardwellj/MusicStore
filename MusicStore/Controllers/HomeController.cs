@@ -12,6 +12,7 @@ namespace MusicStore.Controllers
 {
     public class HomeController : Controller
     {
+        // GRADY - Remove this line, no longer needed.
         private List<Album> albums;
         private EFDbContext db = new EFDbContext();
 
@@ -22,6 +23,7 @@ namespace MusicStore.Controllers
 
         public ActionResult Albums()
         {
+            // GRADY - It should be ToList() with a capital "L"
             ViewBag.Albums = db.Albums.Tolist().OrderBy(album => album.Title);
 
             return View();
